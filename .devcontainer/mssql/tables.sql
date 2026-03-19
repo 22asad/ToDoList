@@ -1,0 +1,10 @@
+USE ApplicationDB;
+GO
+
+CREATE TABLE Tasks (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Title NVARCHAR(100) NOT NULL,
+    IsCompleted BIT DEFAULT 0,
+    CreatedAt DATETIME DEFAULT GETDATE()
+);
+GO
